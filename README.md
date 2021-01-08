@@ -1,16 +1,16 @@
-### Hi there 👋
+# betbeetle.com 
+Welcome to betbeetle Github 👋 
 
-<!--
-**betbeetle/betbeetle** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## What is betbeetle?
+Betting between friends and the community, safe and fast on smart contracts. Betbeetle offers to create your own bets on a smart contract - crypto, sports, politics and more. Decentralised, secure, instant. No KYC and no registration required.
 
-Here are some ideas to get you started:
+## What will I find here?
+This github covers the frontend code of betbeetle.com. The team is working in this repository for frontend developments. 🌱
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Where can I find more information?
+Please use the following links to get more information:
+
+- Official website: https://www.betbeetle.com
+- Twitter: https://twitter.com/betbeetle_com
+- Telegram: https://t.me/betbeetle
+- Medium: https://medium.com/betbeetle
