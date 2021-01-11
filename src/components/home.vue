@@ -114,7 +114,7 @@ export default {
   },
   beforeMount () {
     this.token['0x0000000000000000000000000000000000000000'] = 'ETH'
-    this.token['0x0000000000000000000000000000000000000010'] = 'BTC'
+    // this.token['0x0000000000000000000000000000000000000010'] = 'xx'
     if (this.$store.getters.connected && BetContract) {
       this.getPositivesBets()
     } else {

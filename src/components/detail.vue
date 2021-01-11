@@ -61,19 +61,23 @@
 
 
           <div class="grey-bg text-center">
-            <div><h4>Time until betting end</h4>
-            <countdown :time="Math.abs(new Date(parseInt(bet.endDate) * 1000) - new Date)">
-              <template slot-scope="props">
-                <div id="countdown">
-                  <ul>
-                    <li v-if="props.days > 0"><span id="days">{{ props.days }}</span>day</li>
-                    <li v-if="props.hours > 0 || props.days > 0"><span id="hours"> {{ props.hours }}</span>hour</li>
-                    <li v-if="props.minutes > 0 || props.hours > 0 || props.days > 0"><span id="minutes">{{ props.minutes }}</span>min</li>
-                    <li v-if="props.seconds > 0 || props.minutes > 0 || props.hours > 0 || props.days > 0"><span id="seconds">{{ props.seconds }}</span>sec</li>
-                  </ul>
-                </div>
-                </template>
-            </countdown>
+            <div v-if="new Date(parseInt(bet.endDate) * 1000) - new Date > 0">
+              <h4>Time until betting end</h4>
+              <countdown :time="Math.abs(new Date(parseInt(bet.endDate) * 1000) - new Date)">
+                <template slot-scope="props">
+                  <div id="countdown">
+                    <ul>
+                      <li v-if="props.days > 0"><span id="days">{{ props.days }}</span>day</li>
+                      <li v-if="props.hours > 0 || props.days > 0"><span id="hours"> {{ props.hours }}</span>hour</li>
+                      <li v-if="props.minutes > 0 || props.hours > 0 || props.days > 0"><span id="minutes">{{ props.minutes }}</span>min</li>
+                      <li v-if="props.seconds > 0 || props.minutes > 0 || props.hours > 0 || props.days > 0"><span id="seconds">{{ props.seconds }}</span>sec</li>
+                    </ul>
+                  </div>
+                  </template>
+              </countdown>
+            </div>
+            <div v-else>
+              Bet is expired, not possible to bet anymore.
             </div>
 
           <div class="mt-5" v-if="bet && bet.description">
@@ -168,7 +172,7 @@
               Decide Bet (1)
             </b-button>
           </div>
-          <div class="pb-5 pt-5" v-else>
+          <div class="pb-5 pt-5" v-if="new Date(parseInt(bet.endDate) * 1000) - new Date > 0">
 
             <h3>Place new bet</h3>
             <div class="b-row">
