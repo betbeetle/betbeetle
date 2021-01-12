@@ -32,6 +32,11 @@ export default new Router({
       component: info
     },
     {
+      path: '/imprint',
+      name: 'imprint',
+      component: imprint
+    },
+    {
       path: '/:id/:type?',
       name: 'detail',
       component: detail
