@@ -19,6 +19,9 @@ export default {
       web3ModalFunction: ''
     }
   },
+  props: {
+    rerender: Function
+  },
   computed: {
     connected () {
       return this.$store.getters.connected
@@ -33,75 +36,6 @@ export default {
         solid: true,
         toaster: 'b-toaster-bottom-right'
       })
-    }
-
-    // Tell Web3modal what providers we have available.
-    // Built-in web browser provider (only one can exist as a time)
-    // like MetaMask, Brave or Opera is added automatically by Web3modal
-    let providerOptions = {
-      injected: {
-        display: {
-          // logo: "data:image/gif;base64,INSERT_BASE64_STRING",
-          name: 'betbeetle.com',
-          description: 'Connect with the provider in your Browser'
-        },
-        package: null
-      },
-      walletconnect: {
-        display: {
-          name: 'betbeetle.com'
-        },
-        package: WalletConnectProvider,
-        options: {
-          // Mikko's test key - don't copy as your mileage may vary
-          infuraId: 'fe0e4d2c3e86450692da89ef38195d1c',
-          qrcodeModalOptions: {
-            mobileLinks: [
-              'metamask',
-              'trust',
-              'rainbow',
-              'klever',
-              'rainbow',
-              'argent',
-              'imtoken',
-              'pillar'
-            ]
-          }
-        }
-      }
-    }
-
-    if (Web3Modal) {
-      this.web3ModalFunction = new Web3Modal({
-        cacheProvider: true,
-        providerOptions, // required
-        theme: {
-          background: 'rgb(39, 49, 56)',
-          main: 'rgb(199, 199, 199)',
-          secondary: 'rgb(136, 136, 136)',
-          border: 'rgba(195, 195, 195, 0.14)',
-          hover: 'rgb(16, 26, 32)'
-        },
-        disableInjectedProvider: false // optional. For MetaMask / Brave / Opera.
-      })
-
-      // if (this.web3ModalFunction.cachedProvider) {
-      //  await this.web3ModalFunction.connect()
-      // } else {
-      let provider = await this.web3ModalFunction.connect()
-      if (provider) {
-        this.fetchAccountData(provider)
-        this.$store.commit('changeProvider', provider)
-        // Subscribe to provider disconnection
-        provider.on('disconnect', error => {
-          console.log(error)
-        })
-        provider.on('connect', success => {
-          this.fetchAccountData(provider)
-          console.log(success)
-        })
-      }
-      // }
     }
 
     if (this.$store.getters.getProvider) {
@@ -140,6 +74,7 @@ export default {
         this.$store.commit('changeAddress', accounts[0])
         this.$store.commit('changeChain', chainId)
         this.$store.commit('setConnected', true)
+        this.$emit('rerender')
 
         if (message === 'login') {
           this.$bvToast.toast('Successfully logged in with your wallet.', {
@@ -198,6 +133,74 @@ export default {
      * Connect wallet button pressed.
      */
     async onConnect () {
+       // Tell Web3modal what providers we have available.
+      // Built-in web browser provider (only one can exist as a time)
+      // like MetaMask, Brave or Opera is added automatically by Web3modal
+      let providerOptions = {
+        injected: {
+          display: {
+            // logo: "data:image/gif;base64,INSERT_BASE64_STRING",
+            name: 'betbeetle.com',
+            description: 'Connect with the provider in your Browser'
+          },
+          package: null
+        },
+        walletconnect: {
+          display: {
+            name: 'betbeetle.com'
+          },
+          package: WalletConnectProvider,
+          options: {
+            // Mikko's test key - don't copy as your mileage may vary
+            infuraId: 'fe0e4d2c3e86450692da89ef38195d1c',
+            qrcodeModalOptions: {
+              mobileLinks: [
+                'metamask',
+                'trust',
+                'rainbow',
+                'klever',
+                'rainbow',
+                'argent',
+                'imtoken',
+                'pillar'
+              ]
+            }
+          }
+        }
+      }
+
+      if (Web3Modal) {
+        this.web3ModalFunction = new Web3Modal({
+          cacheProvider: true,
+          providerOptions, // required
+          theme: {
+            background: 'rgb(39, 49, 56)',
+            main: 'rgb(199, 199, 199)',
+            secondary: 'rgb(136, 136, 136)',
+            border: 'rgba(195, 195, 195, 0.14)',
+            hover: 'rgb(16, 26, 32)'
+          },
+          disableInjectedProvider: false // optional. For MetaMask / Brave / Opera.
+        })
+
+        if (this.web3ModalFunction.cachedProvider) {
+          await this.web3ModalFunction.connect()
+        } else {
+          let provider = await this.web3ModalFunction.connect()
+          if (provider) {
+            this.fetchAccountData(provider)
+            this.$store.commit('changeProvider', provider)
+            // Subscribe to provider disconnection
+            provider.on('disconnect', error => {
+              console.log(error)
+            })
+            provider.on('connect', success => {
+              this.fetchAccountData(provider)
+              console.log(success)
+            })
+          }
+        }
+      }
       let isMobile = window.matchMedia('only screen and (max-width: 760px)').matches
       if (this.web3ModalFunction) {
         this.web3ModalFunction.clearCachedProvider()
@@ -270,6 +273,7 @@ export default {
       this.$store.commit('changeAddress', null)
       this.$store.commit('changeChain', null)
       this.$store.commit('setConnected', false)
+      this.$emit('rerender')
 
   // Set the UI back to the initial state, tbd
     }

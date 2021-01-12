@@ -23,7 +23,7 @@
   </section>
 
   <b-container data-aos="fade-up" data-aos-delay="200">
-    <div v-if="!noMetamask && !noMetamaskDesktop">
+    <div v-if="connected">
       <b-tabs class="mt-5 mb-5" >
         <b-tab v-bind:key="cat" v-for="cat of cats" :title="cat">
           <div class="mt-5" v-if="bets[cat]">
@@ -45,18 +45,20 @@
         </b-tab>
       </b-tabs>
     </div>
-    <div class="mt-5" v-else-if="noMetamask && !noMetamaskDesktop">
-      <h4>View bets in Metamask</h4>
+    <div class="mt-5" v-else>
+      <h4>Connect your wallet</h4>
         <div class="mt-4 mb-5">
           <a class="btn-get-started scrollto" href="https://metamask.app.link/dapp/www.betbeetle.com">Open in Metamask Browser</a> | <a class="btn-get-started scrollto" href="https://metamask.io/download">Install Metamask</a> | <a href="https://link.trustwallet.com/open_url?coin_id=60&url=https://www.betbeetle.com">Open in Trustwallet</a>
         </div>
     </div>
+    <!--
     <div class="mt-5" v-else>
       <h2>Install Metamask to view bets</h2>
       <div class="mt-4 mb-5">
         <a :class="buttontext != 'Install Metamask now' ? 'disabled' : ''" @click="updateButton()" class="btn-get-started scrollto" href="https://metamask.app.link/dapp/www.betbeetle.com">Install Metamask</a>
       </div> 
     </div>
+    -->
   </b-container>
   <hr data-aos="fade-up" data-aos-delay="200" />
   <b-container class="mt-5 mb-5" data-aos="fade-up" data-aos-delay="200">
@@ -104,6 +106,7 @@ export default {
       amount: 0,
       noMetamask: false,
       noMetamaskDesktop: false,
+      connected: false,
       buttontext: 'Install Metamask now',
       publicPath: process.env.BASE_URL,
 
@@ -115,16 +118,17 @@ export default {
   beforeMount () {
     this.token['0x0000000000000000000000000000000000000000'] = 'ETH'
     // this.token['0x0000000000000000000000000000000000000010'] = 'xx'
-    if (this.$store.getters.connected && BetContract) {
+    this.connected = this.$store.getters.connected
+    if (this.connected) {
       this.getPositivesBets()
-    } else {
+    } /* else {
       let isMobile = window.matchMedia('only screen and (max-width: 760px)').matches
       if (isMobile) {
         this.noMetamask = true
       } else {
         this.noMetamaskDesktop = true
       }
-    }
+    } */
 
     this.cats = ['Crypto', 'Sports', 'Politics', 'Other']
   },

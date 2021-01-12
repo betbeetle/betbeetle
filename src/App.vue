@@ -1,6 +1,12 @@
 <template>
   <div>
     <div id="app">
+      
+      <div id="loading-wrapper">
+        <div id="loading-text">LOADING</div>
+        <div id="loading-content"></div>
+      </div>
+      
       <header id="header" class="fixed-top" data-aos="slide-down" data-aos-delay="200">
     <div class="grid-container d-flex align-items-center">
 
@@ -14,7 +20,7 @@
         </ul>
       </nav><!-- .nav-menu -->
 
-      <connect></connect>
+      <connect @rerender="rerenderComponent"></connect>
 
     </div>
   </header>
@@ -26,7 +32,7 @@
         name="fade"
         mode="out-in"
       >
-      <router-view></router-view>
+      <router-view :key="key"></router-view>
       </transition>
 
       <footer data-aos="fade-up" data-aos-delay="200" id="footer" class="grey-bg">
@@ -39,10 +45,11 @@
             <div>
               Beat your friends or the community with your own bets and win up to 98% of your opponents' bets. The more wins you get, the higher you'll move up in the level and scoop up even more betting winnings.
               <!--
-              Av de las Américas<br>
-              15000 Ciudad de la Costa<br>
-              Departamento de Montevideo<br>
-              Uruguay<br><br>
+              ** Add real address **
+              Óðin Poulsen FA<br>
+              64 Hoyvíksvegur<br>
+              Tórshavn 100<br>
+              Faroe Islands<br><br>
               -->
 
               <br><br>
@@ -51,9 +58,8 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>More Links</h4>
+            <h4>Links</h4>
             <ul>
-              <li><router-link :to="{ name: 'home' }">Blog</router-link></li>
               <li><router-link :to="{ name: 'create' }">Create Bet</router-link></li>
               <li><router-link :to="{ name: 'account' }">My Account</router-link></li>
               <li><router-link :to="{ name: 'info' }">New token listing</router-link></li>
@@ -63,11 +69,9 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Social media</h4>
             <ul>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Telegram</a></li>
-              <li><a href="#">Medium</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Facebook</a></li>
+              <li><a href="https://twitter.com/betbeetle_com">Twitter</a></li>
+              <li><a href="https://t.me/betbeetle_com">Telegram</a></li>
+              <li><a href="https://medium.com/betbeetle">Medium</a></li>
             </ul>
           </div>
 
@@ -98,6 +102,7 @@ export default {
   name: 'app',
   data () {
     return {
+      key: 0,
       noMetamask: false,
       noMetamaskDesktop: false
     }
@@ -106,6 +111,9 @@ export default {
     connect
   },
   methods: {
+    rerenderComponent () {
+      this.key = this.key += 1
+    }
   },
   beforeMount () {
     if (!web3) {
