@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import home from '@/components/home'
 import create from '@/components/create'
 import account from '@/components/account'
+import imprint from '@/components/imprint'
 import detail from '@/components/detail'
 import info from '@/components/info'
 
