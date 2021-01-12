@@ -37,17 +37,13 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>betbeetle</h3>
             <div>
-              Beat your friends or the community with your own bets and win up to 98% of your opponents' bets. The more wins you get, the higher you'll move up in the level and scoop up even more betting winnings.
-              <!--
-              ** Add real address **
               Óðin Poulsen FA<br>
               64 Hoyvíksvegur<br>
               Tórshavn 100<br>
-              Faroe Islands<br><br>
-              -->
-
+              Faroe Islands<br>
               <br><br>
-              <strong>Email:</strong> info@betbeetle.com<br>
+              <h4>Responsible betting</h4>
+            <p>Gambling can be addictive. For this reason, please only bet money that you can afford to lose. If you recognize signs of gambling addiction, <a href="https://www.helpguide.org/articles/addictions/gambling-addiction-and-problem-gambling.htm">this page</a> may help you.</p>
             </div>
           </div>
 
@@ -57,6 +53,7 @@
               <li><router-link :to="{ name: 'create' }">Create Bet</router-link></li>
               <li><router-link :to="{ name: 'account' }">My Account</router-link></li>
               <li><router-link :to="{ name: 'info' }">New token listing</router-link></li>
+              <li><router-link :to="{ name: 'imprint' }">Legal</router-link></li>
             </ul>
           </div>
 
@@ -70,9 +67,9 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Responsible betting</h4>
-            <p>Gambling can be addictive. For this reason, please only bet money that you can afford to lose. If you recognize signs of gambling addiction, <a href="https://www.helpguide.org/articles/addictions/gambling-addiction-and-problem-gambling.htm">this page</a> may help you.</p>
-            
+            <h4>The profits</h4>
+            <p>Beat your friends or the community with your own bets and win up to 98% of your opponents' bets. The more wins you get, the higher you'll move up in the level and scoop up even more betting winnings.</p>
+            <p><strong>Email:</strong> info@betbeetle.com</p>
           </div>
 
         </div>
@@ -85,12 +82,14 @@
   </footer>
     </div>
     </div>
+    <cookie-law theme="blood-orange" />
   </div>
 </template>
 
 <script>
 import web3 from '@/contracts/web3'
 import connect from '@/components/connect.vue'
+import CookieLaw from 'vue-cookie-law'
 
 export default {
   name: 'app',
@@ -102,11 +101,18 @@ export default {
     }
   },
   components: {
-    connect
+    connect,
+    CookieLaw
   },
   methods: {
     rerenderComponent () {
       this.key = this.key += 1
+    },
+    setLang (lang) {
+      if (lang === 'en' || lang === 'de') {
+        localStorage.setItem('lang', lang)
+        location.reload()
+      }
     }
   },
   beforeMount () {
