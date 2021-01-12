@@ -1,12 +1,6 @@
 <template>
   <div>
     <div id="app">
-      
-      <div id="loading-wrapper">
-        <div id="loading-text">LOADING</div>
-        <div id="loading-content"></div>
-      </div>
-      
       <header id="header" class="fixed-top" data-aos="slide-down" data-aos-delay="200">
     <div class="grid-container d-flex align-items-center">
 
