@@ -1,17 +1,23 @@
 <template>
   <div>
-    <div class="subpage-title" data-aos="slide-down" data-aos-delay="200" v-if="bet">
+    <div class="subpage-title" data-aos="slide-down" data-aos-delay="200">
     <h1>
       Imprint
     </h1>
     </div>
+    <b-container>
+    Responsible for the website:<br><br>
     <div>
       Óðin Poulsen FA<br>
       64 Hoyvíksvegur<br>
       Tórshavn 100<br>
       Faroe Islands<br>
+      <br>
+      Email: info@betbeetle.com
       <br><br>
-      <h1>Disclaimer for betbeetle.com</h1>
+      <h1>DISCLAIMER</h1>
+
+      <p>Our website is just a frontend that allows betting between friends and the community. Since the offer is decentralized and therefore works without registration and KYC, it is not possible for us to exclude certain countries from the offer. By participating in betting, the participant confirms that the participation is legal in his country. Betbeetle.com explicitly disclaims any liability. Betbeetle.com does not make any profit from the platform.</p>
 
 <p>If you require any more information or have any questions about our site's disclaimer, please feel free to contact us by email at info@betbeetle.com. Our Disclaimer was generated with the help of the <a href="https://www.disclaimergenerator.net/">Disclaimer Generator</a>.</p>
 
@@ -33,7 +39,7 @@
 
 <hr />
 
-<h1>Privacy Policy for betbeetle.com</h1>
+<h1>PRIVACY POLICY</h1>
 
 <p>At betbeetle.com, accessible from https://www.betbeetle.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by betbeetle.com and how we use it.</p>
 
@@ -120,6 +126,7 @@
 <p>betbeetle.com does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
 
     </div>
+    </b-container>
   </div>
 </template>
 

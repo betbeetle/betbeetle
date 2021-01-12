@@ -140,14 +140,14 @@ export default {
         injected: {
           display: {
             // logo: "data:image/gif;base64,INSERT_BASE64_STRING",
-            name: 'betbeetle.com',
+            name: 'Wallet',
             description: 'Connect with the provider in your Browser'
           },
           package: null
         },
         walletconnect: {
           display: {
-            name: 'betbeetle.com'
+            name: 'WalletConnect'
           },
           package: WalletConnectProvider,
           options: {

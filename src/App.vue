@@ -35,16 +35,9 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>betbeetle</h3>
-            <div>
-              Óðin Poulsen FA<br>
-              64 Hoyvíksvegur<br>
-              Tórshavn 100<br>
-              Faroe Islands<br>
-              <br><br>
-              <h4>Responsible betting</h4>
-            <p>Gambling can be addictive. For this reason, please only bet money that you can afford to lose. If you recognize signs of gambling addiction, <a href="https://www.helpguide.org/articles/addictions/gambling-addiction-and-problem-gambling.htm">this page</a> may help you.</p>
-            </div>
+            <h4>betbeetle</h4>
+            <p>Beat your friends or the community with your own bets and win up to 98% of your opponents' bets. The more wins you get, the higher you'll move up in the level and scoop up even more betting winnings.</p>
+            <br><p><strong>Email:</strong> info@betbeetle.com</p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
@@ -67,9 +60,8 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>The profits</h4>
-            <p>Beat your friends or the community with your own bets and win up to 98% of your opponents' bets. The more wins you get, the higher you'll move up in the level and scoop up even more betting winnings.</p>
-            <p><strong>Email:</strong> info@betbeetle.com</p>
+            <h4>Responsible betting</h4>
+            <p>Gambling can be addictive. For this reason, please only bet money that you can afford to lose. If you recognize signs of gambling addiction, <a href="https://www.helpguide.org/articles/addictions/gambling-addiction-and-problem-gambling.htm">this page</a> may help you.</p>
           </div>
 
         </div>
@@ -82,7 +74,11 @@
   </footer>
     </div>
     </div>
-    <cookie-law theme="blood-orange" />
+    <cookie-law theme="dark-lime">
+      <div slot="message">
+    This website uses cookies to ensure you get the best experience on our website. <router-link :to="{ name: 'imprint' }">Privacy policy</router-link>
+  </div>
+  </cookie-law>
   </div>
 </template>
 
@@ -125,14 +121,14 @@ export default {
       }
     } else {
       // network id 1 = mainnet, 3 = ropsten
-      if (this.$store.getters.getChain === 3) {
+      /* if (this.$store.getters.getChain === 3) {
         this.$bvToast.toast('Only the Ropsten testnet is supported as of now.', {
           title: 'Change network',
           variant: 'info',
           solid: true,
           toaster: 'b-toaster-bottom-full'
         })
-      }
+      } */
     }
   }
 }
