@@ -46,7 +46,7 @@
               <li><router-link :to="{ name: 'create' }">Create Bet</router-link></li>
               <li><router-link :to="{ name: 'account' }">My Account</router-link></li>
               <li><router-link :to="{ name: 'info' }">New token listing</router-link></li>
-              <li><router-link :to="{ name: 'imprint' }">Legal</router-link></li>
+              <li><router-link :to="{ name: 'imprint' }">Imprint</router-link></li>
             </ul>
           </div>
 
