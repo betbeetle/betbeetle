@@ -173,10 +173,9 @@
             </b-button>
           </div>
           <div class="pb-5 pt-5" v-if="new Date(parseInt(bet.endDate) * 1000) - new Date > 0">
-
-            <h3>Place new bet</h3>
-            <div class="b-row">
+            
               <b-container fluid="sm" class="bv-example-row">
+            <h3>Place new bet</h3>
                 <b-row>
                   <b-col sm>
                     <!--
@@ -229,7 +228,6 @@
                   </b-col>
                 </b-row>
               </b-container>
-            </div>
           </div>
       </div>
     </div>

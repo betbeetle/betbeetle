@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div id="app">
       <header id="header" class="fixed-top" data-aos="slide-down" data-aos-delay="200">
     <div class="grid-container d-flex align-items-center">
@@ -73,17 +72,17 @@
     </div>
   </footer>
     </div>
-    </div>
+    
     <cookie-law theme="dark-lime">
-      <div slot="message">
-    This website uses cookies to ensure you get the best experience on our website. <router-link :to="{ name: 'imprint' }">Privacy policy</router-link>
-  </div>
-  </cookie-law>
-  </div>
+        <div slot="message">
+      This website uses cookies to ensure you get the best experience on our website. <router-link :to="{ name: 'imprint' }">Privacy policy</router-link>
+    </div>
+    </cookie-law>
+    </div>
 </template>
 
 <script>
-import web3 from '@/contracts/web3'
+// import web3 from '@/contracts/web3'
 import connect from '@/components/connect.vue'
 import CookieLaw from 'vue-cookie-law'
 
@@ -112,14 +111,14 @@ export default {
     }
   },
   beforeMount () {
-    if (!web3) {
+    /* if (!web3) {
       let isMobile = window.matchMedia('only screen and (max-width: 760px)').matches
       if (isMobile) {
         this.noMetamask = true
       } else {
         this.noMetamaskDesktop = true
       }
-    } else {
+    } else { */
       // network id 1 = mainnet, 3 = ropsten
       /* if (this.$store.getters.getChain === 3) {
         this.$bvToast.toast('Only the Ropsten testnet is supported as of now.', {
@@ -129,7 +128,7 @@ export default {
           toaster: 'b-toaster-bottom-full'
         })
       } */
-    }
+    // }
   }
 }
 </script>
