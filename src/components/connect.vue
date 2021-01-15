@@ -1,6 +1,6 @@
 <template>
   <span>
-      <a href="#" class="get-started-btn scrollto" v-on="!btndisabled ? { onConnect: () => handler } : {}" v-if="!connected" @click="onConnect">Login</a>
+      <a href="#" class="get-started-btn scrollto" v-on="!btndisabled ? { onConnect: () => handler } : {}" v-if="!connected" @click="onConnect">Connect</a>
       <router-link class="get-started-btn scrollto" :to="{ name: 'account' }" v-else>Account</router-link>
   </span>
 </template>

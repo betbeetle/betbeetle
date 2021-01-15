@@ -245,7 +245,7 @@ svg {
   border: 1px solid #495057 !important;
 }
 
-button:not(#decisionDate) {
+button:not(#decisionDate), button:not(.btn-primary) {
   padding:1rem !important;
   background:transparent !important;
 }

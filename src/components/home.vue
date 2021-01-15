@@ -46,9 +46,12 @@
       </b-tabs>
     </div>
     <div class="mt-5" v-else>
-      <h4>Connect your wallet</h4>
+      <h4>Not connected</h4>
         <div class="mt-4 mb-5">
+          <div>Please make sure that your wallet is connected to view all bets.</div>
+          <div>
           <a class="btn-get-started scrollto" href="https://metamask.app.link/dapp/www.betbeetle.com">Open in Metamask Browser</a> | <a class="btn-get-started scrollto" href="https://metamask.io/download">Install Metamask</a> | <a href="https://link.trustwallet.com/open_url?coin_id=60&url=https://www.betbeetle.com">Open in Trustwallet</a>
+          </div>
         </div>
     </div>
     <!--

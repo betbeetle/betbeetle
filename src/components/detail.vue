@@ -1,18 +1,18 @@
 <template>
   <div>
-    <div class="subpage-title" data-aos="slide-down" data-aos-delay="200" v-if="bet">
+    <div class="subpage-title" data-aos="slide-down" data-aos-delay="200" v-if="bet && $store.getters.connected">
     <h1>
       {{ bet.title }}
     </h1>
     </div>
     
-    <div data-aos="slide-down" data-aos-delay="200" v-else>
+    <div data-aos="slide-down" data-aos-delay="200" v-else-if="!$store.getters.connected">
       <b-container fluid="sm" class="mt-5 mb-5 bv-example-row">
         <div class="subpage-title">
-          <h1>No bet found</h1>
+          <h1>Not connected</h1>
         </div>
         <div class="text-center">
-          Please make sure that you are connected with the internet and that your wallet is connected.
+          Please make sure that your wallet is connected to view the bet.
         </div>
       </b-container>
     </div>
@@ -23,12 +23,12 @@
 
 
     <div>
-      <div class="b-row" v-if="bet">
+      <div class="b-row" v-if="bet && $store.getters.connected">
 
           <b-container fluid="sm" class="mb-4 bv-example-row">
             
             <div v-html="bet.description"></div>
-            <div class="mt-3"><b>Decision date</b>: {{ new Date(parseInt(bet.decisionDate) * 1000).toLocaleDateString() }}</div>
+            <div v-if="bet.decisionDate" class="mt-3"><b>Decision date</b>: {{ new Date(parseInt(bet.decisionDate) * 1000).toLocaleDateString() }}</div>
  
             <b-row class="align-items-center mt-4">
               <b-col class="text-center">
@@ -176,6 +176,17 @@
             
               <b-container fluid="sm" class="bv-example-row">
             <h3>Place new bet</h3>
+            <b-row>
+              <b-form-checkbox
+                id="terms"
+                v-model="terms"
+                name="terms"
+                :value="true"
+                :unchecked-value="false"
+              >
+                I accept the terms and use
+              </b-form-checkbox>
+            </b-row>
                 <b-row>
                   <b-col sm>
                     <!--
@@ -199,6 +210,7 @@
                         button-variant="outline-primary"
                         size="lg"
                         name="radio-btn-outline"
+                        :disabled="!terms"
                         :state="$v.betoption.$error ? false : null"
                       ></b-form-radio-group>
                     </b-form-group>
@@ -210,6 +222,7 @@
                         id="amount"
                         type="number"
                         v-model="amount"
+                        :disabled="!terms"
                         required
                         :state="$v.amount.$error ? false : null"
                       />
@@ -221,8 +234,7 @@
                   <b-col sm>
                     <b-button
                       :variant="'primary'"
-                      @click="handleSubmit"
-                    >
+                      v-on:click="terms ? handleSubmit() : ''">
                       Send bet
                     </b-button>
                   </b-col>
@@ -262,6 +274,7 @@ export default {
       bets: [],
       myBets: [],
       fields: [],
+      terms: false,
 
       title: '',
       betoption: '',
