@@ -183,7 +183,7 @@ li {
 }
 
 a {
-  color: #ED3737
+  color: #ED3737 !important;
 }
 
 .error {
