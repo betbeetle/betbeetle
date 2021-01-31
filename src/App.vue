@@ -1,9 +1,9 @@
 <template>
     <div id="app">
-      <header id="header" class="fixed-top" data-aos="slide-down" data-aos-delay="200">
+      <header id="header" class="fixed-top">
     <div class="grid-container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><router-link :to="{ name: 'home' }"><img src="./assets/logo/android-icon-72x72.png" /></router-link></h1>
+      <h1 class="logo mr-auto"><router-link :to="{ name: 'home' }"><b-img class="image1" :src="logo"></b-img></router-link></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -28,7 +28,7 @@
       <router-view :key="key"></router-view>
       </transition>
 
-      <footer data-aos="fade-up" data-aos-delay="200" id="footer" class="grey-bg">
+      <footer id="footer" class="grey-bg">
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -55,6 +55,7 @@
               <li><a href="https://twitter.com/betbeetle_com">Twitter</a></li>
               <li><a href="https://t.me/betbeetle_com">Telegram</a></li>
               <li><a href="https://medium.com/betbeetle">Medium</a></li>
+              <li><a href="https://github.com/betbeetle/betbeetle">Github</a></li>
             </ul>
           </div>
 
@@ -90,6 +91,7 @@ export default {
   name: 'app',
   data () {
     return {
+      logo: require('@/assets/logor-1100.png'),
       key: 0,
       noMetamask: false,
       noMetamaskDesktop: false
@@ -161,7 +163,7 @@ h1, .h1 {
 }
 
 h3, .h3 {
-  font-size:1.3rem !important;
+  font-size:1.5rem !important;
   color:#fff !important;
   text-transform: uppercase !important;
 }
@@ -182,7 +184,7 @@ li {
   margin: 0 10px;
 }
 
-a {
+a:not(.get-started-btn):not(.btn-get-started):not(.btn-link) {
   color: #ED3737 !important;
 }
 
@@ -245,13 +247,13 @@ svg {
   border: 1px solid #495057 !important;
 }
 
-button:not(#decisionDate), button:not(.btn-primary) {
-  padding:1rem !important;
+button:not(#decisionDate):not(.btn-primary):not(.btn-link) {
+  padding:1rem 1.5rem !important;
   background:transparent !important;
 }
 
 button:hover {
-  opacity:0.5 !important;
+  opacity:0.75 !important;
 }
 
 .text-dark {
@@ -276,7 +278,7 @@ button:hover {
 .btn-link:hover {
   text-decoration:none !important;
   background:#23323D;
-  color: #fff;
+  color: #fff !important;
 }
 
 label {
@@ -373,7 +375,7 @@ li a {
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
   border-radius: 2rem;
-  background: #C00000 !important;
+  background: #4A1B21 !important;
   padding:0.5rem 2rem !important;
   color:#fff !important;
 }

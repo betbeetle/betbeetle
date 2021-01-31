@@ -184,7 +184,7 @@
                 :value="true"
                 :unchecked-value="false"
               >
-                I accept the terms and use
+                I accept the <router-link :to="{ name: 'imprint' }">terms and conditions</router-link>
               </b-form-checkbox>
             </b-row>
                 <b-row>
