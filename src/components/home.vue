@@ -9,7 +9,7 @@
       </b-col>
       <b-col class="min-heading" md="6" lg="6" xl="6">
         <b-img
-          style="width: 180px; display: block; margin: auto"
+          style="width:280px; display: block; margin: auto"
           :src="logo"
         ></b-img>
         <h1
@@ -51,7 +51,7 @@
       </b-col>
     </b-row>
     </section>
-    <section>
+    <section style="padding-bottom:10px !important">
       <b-container data-aos="fade-up" data-aos-delay="200">
       <div v-if="connected">
         <b-tabs class="mt-5 mb-5" >
@@ -167,7 +167,7 @@
     -->
 
     <!-- animated Section -->
-    <section>
+    <section style="padding-top:10px !important">
     <div data-aos="fade-up" data-aos-delay="200"
       class="image-show justify-content-center mt-3"
     >
@@ -264,10 +264,10 @@
     >
       <b-row class="video-top">
         <b-col cols="12" md="7" lg="7" class="action-work">
-          <h1 style="margin-left: 2em; margin-top:2rem; color: #fff">
+          <h1 style="margin-top:2rem; color: #fff">
             How does Betbeetle work?
           </h1>
-          <p>
+          <p class="center">
             Learn more on how you create new bets, participate in existing bets and level up to maximize your betting profits.
           </p>
           <p>
@@ -281,7 +281,7 @@
           </button>
           </p>
         </b-col>
-        <b-col cols="12" md="5" lg="5" class="video-circle">
+        <b-col cols="12" md="5" lg="5" class="pl-4 pr-4">
           <b-row>
             <b-col cols="12">
               <b-img :src="video"> </b-img>
@@ -306,7 +306,7 @@
           <div class="video-modal">
             <iframe
               style="width: 460px; height: 300px"
-              src="https://www.youtube.com/embed/A3PDXmYoF5U"
+              src="https://www.youtube.com/embed/9SGHYe6VIrs"
               allowfullscreen
             ></iframe>
           </div>
@@ -459,14 +459,6 @@
                     style="margin-top: 2.5em"
                   >
                     <span class="dot">
-                      <b-img
-                        :class="
-                          hoverValue == true && numbeCheck == index
-                            ? 'curcular-component-hover'
-                            : 'curcular-component-nHover'
-                        "
-                        :src="curcularComponent"
-                      ></b-img>
                       <div class="shape">
                         <b-img :src="item.img"></b-img>
                       </div>
@@ -539,24 +531,20 @@ export default {
       headerLeft1: require('@/assets/img/ia_100000036.png'),
       videoButton: require('@/assets/img/video.png'),
       headerLeft2: require('@/assets/img/ia_100000006.png'),
-      auction: require('@/assets/img/ia_100000008.png'),
       claimLeft: require('@/assets/img/ia_100000017.png'),
       claimRight: require('@/assets/img/ia_100000009.png'),
-      auctionWork: require('@/assets/img/defibids_how-top-cover.png'),
+      auctionWork: require('@/assets/img/beetles.png'),
       auctionContentRightCol1: require('@/assets/img/ia_100000020.png'),
       auctionWin: require('@/assets/img/ia_100000021.png'),
       auctionContentLeftCol2: require('@/assets/img/ia_100000022.png'),
-      auctionContentRightCol2: require('@/assets/img/ia_100000023.png'),
-      auctionContentLeftCol3: require('@/assets/img/ia_100000024.png'),
       tokensBurned: require('@/assets/img/ia_100000029.png'),
       fire: require('@/assets/img/ia_100000028.png'),
       rocket: require('@/assets/img/ia_100000025.png'),
       video: require('@/assets/img/ia_100000019.png'),
-      curcularComponent: require('@/assets/img/ia_100000010.png'),
-      cardComponent: require('@/assets/img/ia_100000030.png'),
+      cardComponent: require('@/assets/img/ia_100000030.png')
       // card item Arrey
 
-      cardItems: [{heading: 'simply dummy text of the printing 1', paragraph: 'is simply dummy text of the printing and typesettin dummy text of the printing and typesettin dummy text of the printing and typesetting', img: require('@/assets/img/ia_100000030.png')}, {heading: 'simply dummy text of the printing 1', paragraph: 'is simply dummy text of the printing and typesetting', img: require('@/assets/img/ia_100000030.png')}, {heading: 'simply dummy text of the printing 1', paragraph: 'is simpldummy text of the printing and typesettindummy text of the printing and typesettiny dummy text of the printing and typesetting', img: require('@/assets/img/ia_100000030.png')}]
+      // cardItems: [{heading: 'simply dummy text of the printing 1', paragraph: 'is simply dummy text of the printing and typesettin dummy text of the printing and typesettin dummy text of the printing and typesetting', img: require('@/assets/img/ia_100000030.png')}, {heading: 'simply dummy text of the printing 1', paragraph: 'is simply dummy text of the printing and typesetting', img: require('@/assets/img/ia_100000030.png')}, {heading: 'simply dummy text of the printing 1', paragraph: 'is simpldummy text of the printing and typesettindummy text of the printing and typesettiny dummy text of the printing and typesetting', img: require('@/assets/img/ia_100000030.png')}]
 
     }
   },

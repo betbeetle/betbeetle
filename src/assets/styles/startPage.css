@@ -4,18 +4,10 @@
     --secondary: #5d6bf8;
     --third: #e27fcb;
   }
-
-  @media screen and (max-width: 978px) {
-    .video-circle{
-      margin-top: -10em;
-    }
-  }
-  
   
   @media screen and (max-width: 600px) {
     .action h1 {
       font-size: 30px;
-      margin-right: 10%;
       color:#FFFFFF;
       text-align:center;
       font-weight: bold;
@@ -25,8 +17,8 @@
   font-size: 20px;
       color:#FFFFFF;
       margin-left: 5%;
-    margin-right:20%;
-     text-align:start;
+    margin-right:5%;
+     text-align:center;
       font-weight: bold;
       
     
@@ -73,21 +65,19 @@
     margin-top: -90%;
   }
   .action-work h1{
-    margin-left: 10%;
-    margin-right: 10%;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
     font-size: 30px;
       text-align:center;
       font-weight: bold;
     
   }
   .action-work p{
-     margin-left: 10%;
-    margin-right: 10%;
     font-size: 17px;
     color:#7F7171;
-    margin-left:15%;
+    margin-left:5%;
     margin-right:5%;
-     text-align:start;
+     text-align:center;
       font-weight: bold;
       
     
@@ -95,8 +85,7 @@
   .down-top p{
     font-size: 17px;
     color:#7FE4F5;
-     text-align:start;
-      margin-left:2px;
+     text-align:justify;
       font-weight: bold;
       
   }
@@ -296,9 +285,6 @@
     animation: orbit2 4s linear infinite; /* Chrome, Firefox 16+, 
                                                        IE 10+, Safari 5 */
   }
-  .content-action{
-    margin-left: 10%;
-  }
   .curcular {
     margin-top: 13.1em;
     max-width: 20px;
@@ -411,10 +397,7 @@
     }
   }
   .fire-move {
-    -webkit-animation: fire 1s infinite alternate;
-    animation: fire 1s infinite alternate;
-  }
-  .fire-move {
+    z-index:1;
     -webkit-animation: fire 1s infinite alternate;
     animation: fire 1s infinite alternate;
   }
@@ -500,6 +483,7 @@
   }
   .min-heading {
       margin-top: 20px;
+      padding-right: 5%;
    }
    .claim-left{
      margin-top:-15%;
@@ -569,21 +553,19 @@
    }
    
   .action-work h1{
-    margin-left: 10%;
-    margin-right: 10%;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
     font-size: 40px;
       text-align:center;
       font-weight: bold;
     
   }
   .action-work p{
-     margin-left: 10%;
-    margin-right: 10%;
+     margin-left: 5%;
+    margin-right: 5%;
     font-size: 27px;
     color:#7F7171;
-    margin-left:15%;
-    margin-right:5%;
-     text-align:start;
+     text-align:center;
       font-weight: bold;
       
     
@@ -1120,10 +1102,12 @@
   }
   
   .fire-move {
+    z-index:1;
     -webkit-animation: fire 1s infinite alternate;
     animation: fire 1s infinite alternate;
   }
   .fire-move {
+    z-index:1;
     -webkit-animation: fire 1s infinite alternate;
     animation: fire 1s infinite alternate;
   }
