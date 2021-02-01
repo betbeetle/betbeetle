@@ -468,6 +468,7 @@
     color: white;
   }
   .content-action h1 {
+    margin-top:10px;
     margin-left: 10%;
     margin-right:10%;
     display: block;

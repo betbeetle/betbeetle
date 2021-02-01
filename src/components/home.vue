@@ -339,7 +339,7 @@
             block
             style="background-color: rgb(214, 0, 7) !important"
           >
-            Buy $BID (soon)
+            Buy $BTL (soon)
           </button>
           </p>
         </b-col>
@@ -403,7 +403,7 @@
           <b-img center class="fire-move" :src="fire"> </b-img>
         </b-col>
         <b-col class="fire-token-down" cols="12" sm="12" md="12" lg="12" style="margin-top: 5rem !important;">
-          <b-img center :src="tokensBurned"> </b-img>
+          <b-img center :src="tokensBurned" style="margin-top:15px"> </b-img>
         </b-col>
       </b-row>
     </div>
@@ -420,10 +420,7 @@
             <h1>Tokenomics</h1>
 
             <p>
-              The DefiBids ($BID) smart contracts and auction protocols are
-              quite complex but the underlying concepts that drive our token are
-              relatively simple. Here is a brief overview of our PHASE 1
-              tokenomics:
+              sdfhsdfhdsfh
             </p>
           </b-col>
 
