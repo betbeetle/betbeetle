@@ -106,7 +106,7 @@
             <span style="color: #0d59cc; font-weight: bold; font-size: 20px"
               >Contract:</span
             ><span style="color: #192227; font-size: 18px"
-              >1dA01e84F3d4e6716sdsdsd</span
+              >xxx</span
             >
           </p>
         </b-col>
@@ -156,7 +156,7 @@
                 style="background-color: #ca0007 !important"
               >
                 <i class="fas fa-gavel mx-2 large" aria-hidden="true"></i>Learn
-                More About Auction
+                More About xx
               </button>
             </b-col>
           </b-row>
