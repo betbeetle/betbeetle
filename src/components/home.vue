@@ -189,10 +189,10 @@
     <div class="down-top" style="padding:1rem !important; background:#4A1B21 !important; padding: 5rem 2rem  !important">
       <b-row>
         <b-col class="d-none d-md-block" cols="4" data-aos="fade-up" data-aos-delay="200"></b-col>
-        <b-col cols="8" class="down-top-counter" data-aos="fade-up" data-aos-delay="200">
+        <b-col cols="8" class="down-top-counter mt-5" data-aos="fade-up" data-aos-delay="200">
           <h1>Stake your claim.</h1>
           <p style="color: #ffffff !important">
-            Receive 82% of the fees of all bets in $ETH by staking $BTL.
+            Receive 82% of the fees of all bets in $ETH by staking $BTL. Coming soon.
           </p>
           <b-row class="row justify-content-center">
             <b-col cols="12" sm="12" md="6" lg="6" class="down-top-counter">
@@ -618,7 +618,7 @@ export default {
 }
 
 .textfont {
-  font-size:1.25rem !important;
+  font-size:17px !important;
 }
 
 .floatLeft {

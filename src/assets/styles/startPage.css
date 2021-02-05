@@ -7,6 +7,7 @@
   
   @media screen and (max-width: 600px) {
     .action h1 {
+      margin-top:20px;
       font-size: 30px;
       color:#FFFFFF;
       text-align:center;
@@ -103,7 +104,6 @@
   }
   .down-top-counter h2{
     font-size: 20px !important;
-    margin-left:5%;
       text-align:start;
       font-weight: bold;
       color:#ED3737 !important;
@@ -468,7 +468,7 @@
     color: white;
   }
   .content-action h1 {
-    margin-top:10px;
+    margin-top:20px;
     margin-left: 10%;
     margin-right:10%;
     display: block;
