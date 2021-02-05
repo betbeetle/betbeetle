@@ -76,11 +76,11 @@
         </b-tabs>
       </div>
       <div class="mt-5" v-else>
-        <h1>Not connected</h1>
+        <h2>Not connected</h2>
           <div class="mt-4 mb-5 textfont">
             <div>Please make sure that your wallet is connected to view all bets.</div>
             <div>
-            <a class="btn-get-started scrollto" href="https://metamask.app.link/dapp/www.betbeetle.com">Open in Metamask Browser</a> | <a class="btn-get-started scrollto" href="https://metamask.io/download">Install Metamask</a> | <a href="https://link.trustwallet.com/open_url?coin_id=60&url=https://www.betbeetle.com">Open in Trustwallet</a>
+            <a href="https://metamask.app.link/dapp/www.betbeetle.com">Open in Metamask Browser</a> | <a href="https://metamask.io/download">Install Metamask</a> | <a href="https://link.trustwallet.com/open_url?coin_id=60&url=https://www.betbeetle.com">Open in Trustwallet</a>
             </div>
           </div>
       </div>
@@ -190,9 +190,9 @@
       <b-row>
         <b-col class="d-none d-md-block" cols="4" data-aos="fade-up" data-aos-delay="200"></b-col>
         <b-col cols="8" class="down-top-counter" data-aos="fade-up" data-aos-delay="200">
-          <h1>Stake your claim (soon).</h1>
+          <h1>Stake your claim.</h1>
           <p style="color: #ffffff !important">
-            Receive 82% of all bets fees in $ETH by staking $BTL.
+            Receive 82% of the fees of all bets in $ETH by staking $BTL.
           </p>
           <b-row class="row justify-content-center">
             <b-col cols="12" sm="12" md="6" lg="6" class="down-top-counter">
@@ -618,7 +618,7 @@ export default {
 }
 
 .textfont {
-  font-size:1.5rem !important;
+  font-size:1.25rem !important;
 }
 
 .floatLeft {
