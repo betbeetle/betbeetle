@@ -16,10 +16,10 @@
           class="mt-10"
           style="display: block;"
         >
-          YOUR BET ON A SMART CONTRACT — CRYPTO, SPORTS, POLITICS AND MORE.
+          CRYPTO, SPORTS, POLITICS AND MORE.
         </h1>
         <p>
-          Decentralized, instant, no registration. Increase your profits by getting passive income and profit from buy backs and burn through the BTL-Token.
+          Your bet on a smart contract - decentralized, instant, no registration. Increase your profits by getting passive income and profit from buy backs and burn through the BTL-Token.
         </p>
         <div></div>
         <b-row class="row justify-content-center">
