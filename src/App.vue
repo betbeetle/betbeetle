@@ -3,7 +3,7 @@
       <header id="header" class="fixed-top">
     <div class="grid-container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><router-link :to="{ name: 'home' }"><b-img class="image1" :src="logo"></b-img></router-link></h1>
+      <div class="logo mr-auto"><router-link :to="{ name: 'home' }"><b-img class="image1" alt="Betbeete logo" title="Betbeete logo" :src="logo"></b-img></router-link></div>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -34,13 +34,13 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>betbeetle</h4>
+            <h3>betbeetle</h3>
             <p>Beat your friends or the community with your own bets and win up to 98% of your opponents' bets. The more wins you get, the higher you'll move up in the level and scoop up even more betting winnings.</p>
             <br><p><strong>Email:</strong> info@betbeetle.com</p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Links</h4>
+            <h3>Links</h3>
             <ul>
               <li><router-link :to="{ name: 'create' }">Create Bet</router-link></li>
               <li><router-link :to="{ name: 'account' }">My Account</router-link></li>
@@ -50,7 +50,7 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Social media</h4>
+            <h3>Social media</h3>
             <ul>
               <li><a href="https://twitter.com/betbeetle_com">Twitter</a></li>
               <li><a href="https://t.me/betbeetle_com">Telegram</a></li>
@@ -60,7 +60,7 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Responsible betting</h4>
+            <h3>Responsible betting</h3>
             <p>Gambling can be addictive. For this reason, please only bet money that you can afford to lose. If you recognize signs of gambling addiction, <a href="https://www.helpguide.org/articles/addictions/gambling-addiction-and-problem-gambling.htm">this page</a> may help you.</p>
           </div>
 
@@ -166,10 +166,6 @@ h3, .h3 {
   font-size:1.5rem !important;
   color:#fff !important;
   text-transform: uppercase !important;
-}
-
-h4, .h4 {
-  color:#fff;
 }
 
 

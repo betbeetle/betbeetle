@@ -15,7 +15,7 @@
       <br>
       Email: info@betbeetle.com
       <br><br>
-      <h1>DISCLAIMER</h1>
+      <h2>DISCLAIMER</h2>
 
       <p>Our website is just a frontend that allows betting between friends and the community. Since the offer is decentralized and therefore works without registration and KYC, it is not possible for us to exclude certain countries from the offer. By participating in betting, the participant confirms that the participation is legal in his country. Betbeetle.com explicitly disclaims any liability. Betbeetle.com does not make any profit from the platform.</p>
 
@@ -35,7 +35,7 @@
 
 <hr />
 
-<h1>PRIVACY POLICY</h1>
+<h2>PRIVACY POLICY</h2>
 
 <p>At betbeetle.com, accessible from https://www.betbeetle.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by betbeetle.com and how we use it.</p>
 
@@ -124,7 +124,7 @@
     <hr />
 
     <div>
-      <h1>Terms and Conditions</h1>
+      <h2>Terms and Conditions</h2>
 <p>Last updated: January 14, 2021</p>
 <p>Please read these terms and conditions carefully before using our Service.</p>
 <h2>Interpretation</h2>

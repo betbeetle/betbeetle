@@ -6,7 +6,7 @@
   }
   
   @media screen and (max-width: 600px) {
-    .action h1 {
+    .action h2 {
       margin-top:20px;
       font-size: 30px;
       color:#FFFFFF;
@@ -65,10 +65,10 @@
   .action-work{
     margin-top: -90%;
   }
-  .action-work h1{
+  .action-work h2{
     padding-left:0.5rem;
     padding-right:0.5rem;
-    font-size: 30px;
+    font-size: 30px !important;
       text-align:center;
       font-weight: bold;
     
@@ -102,7 +102,7 @@
     width: 300px;
      height: 200px;
   }
-  .down-top-counter h2{
+  .down-top-counter h3{
     font-size: 20px !important;
       text-align:start;
       font-weight: bold;
@@ -467,7 +467,7 @@
     background: black;
     color: white;
   }
-  .content-action h1 {
+  .content-action h2 {
     margin-top:20px;
     margin-left: 10%;
     margin-right:10%;
@@ -477,6 +477,7 @@
       font-size: 50px;
       line-height: 55px;
       text-shadow: 0px 0px 20px #002056;
+      font-weight:900 !important;
   }
   .hover-background {
    
@@ -553,10 +554,10 @@
       max-width: 100%;
    }
    
-  .action-work h1{
+  .action-work h2{
     padding-left:0.5rem;
     padding-right:0.5rem;
-    font-size: 40px;
+    font-size: 40px !important;
       text-align:center;
       font-weight: bold;
     
@@ -819,7 +820,7 @@
     height: 30px;
     width: 30px;
   }
-  .down-top-counter h2{
+  .down-top-counter h3{
     font-size: 20px !important;
    
     margin-right: 20%;
@@ -828,8 +829,8 @@
       color:#ED3737 !important;
       
   }
-  .down-top-counter h1{
-    font-size: 42px !important;
+  .down-top-counter h3{
+    font-size: 34px !important;
   
     margin-right: 20%;
       text-align:start;
@@ -838,11 +839,10 @@
       
   }
   .down-top-counter p{
-    font-size: 32px !important;
+    font-size: 24px !important;
   
     margin-right: 20%;
       text-align:start;
-      font-weight: bold;
       color:#ED3737 !important;
       
   }

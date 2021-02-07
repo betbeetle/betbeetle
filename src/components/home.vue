@@ -190,13 +190,13 @@
       <b-row>
         <b-col class="d-none d-md-block" cols="4" data-aos="fade-up" data-aos-delay="200"></b-col>
         <b-col cols="8" class="down-top-counter mt-5" data-aos="fade-up" data-aos-delay="200">
-          <h1>Stake your claim.</h1>
+          <h2 style="font-size: 2.5rem !important; font-weight:900 !important;">Stake your claim.</h2>
           <p style="color: #ffffff !important">
             Receive 82% of the fees of all bets in $ETH by staking $BTL. Coming soon.
           </p>
-          <b-row class="row justify-content-center">
+          <b-row class="row justify-content-center mt-5">
             <b-col cols="12" sm="12" md="6" lg="6" class="down-top-counter">
-              <h2 style="color: #ffffff !important">
+              <p style="color: #ffffff !important">
                 1 000 000 BTL
                 <!--
                 <VueJsCounter
@@ -207,13 +207,13 @@
                   decimal=","
                 ></VueJsCounter>
                 -->
-              </h2>
-              <h2>
+              </p>
+              <h3>
                 TOTAL SUPPLY
-              </h2>
+              </h3>
             </b-col>
             <b-col cols="12" sm="12" md="6" lg="6" class="down-top-counter">
-              <h2 style="color: #ffffff !important">
+              <p style="color: #ffffff !important">
                 0 BTL
                 <!--
                 <VueJsCounter
@@ -224,10 +224,10 @@
                   decimal=","
                 ></VueJsCounter>
                 -->
-              </h2>
-              <h2>
+              </p>
+              <h3>
                 TOTAL STAKE
-              </h2>
+              </h3>
             </b-col>
           </b-row>
           <b-row class="row justify-content-center">
@@ -264,9 +264,9 @@
     >
       <b-row class="video-top">
         <b-col cols="12" md="7" lg="7" class="action-work">
-          <h1 style="margin-top:2rem; color: #fff">
+          <h2 style="margin-top:2rem; color: #fff">
             How does Betbeetle work?
-          </h1>
+          </h2>
           <p class="center">
             Learn more on how you create new bets, participate in existing bets and level up to maximize your betting profits.
           </p>
@@ -329,7 +329,7 @@
       <b-row class="row justify-content-center">
         <b-col cols="12" md="6" sm="6" lg="6" class="content-action action">
           <b-img style="" :src="auctionContentRightCol1"> </b-img>
-          <h1>Join the $BTL family</h1>
+          <h2>Join the $BTL family</h2>
           <p>
             Install Metamask or any other Ethereum wallet and trade your ETH for Betbeetle ($BTL) tokens.
           </p>
@@ -358,7 +358,7 @@
         </b-col>
         <b-col cols="12" sm="5" md="5" lg="5" class="content-action action">
           <b-img style="" :src="auctionContentLeftCol2"> </b-img>
-          <h1>82% reward for $BTL staking</h1>
+          <h2>82% reward for $BTL staking</h2>
           <p>
             82% of all fees are rewarded to $BTL stakers in ETH. 10% of the fees are used for executing the monthly buy back and burn.
           </p>
@@ -376,7 +376,7 @@
       <b-row class="row justify-content-center">
         <b-col cols="12" md="6" sm="6" lg="6" class="content-action action">
           <b-img style="" :src="auctionWin"> </b-img>
-          <h1>Start winning</h1>
+          <h2>Start winning</h2>
           <p>
             Create bets or participate in existing bets of your friends and other community members. Make new crypto friends in our telegram group.
           </p>
@@ -417,7 +417,7 @@
       <div align="center">
         <b-row class="card-row">
           <b-col cols="12">
-            <h1>Tokenomics</h1>
+            <h2>Tokenomics</h2>
 
             <p>
               sdfhsdfhdsfh

@@ -9,7 +9,7 @@
     <div data-aos="slide-down" data-aos-delay="200" v-else-if="!$store.getters.connected">
       <b-container fluid="sm" class="mt-5 mb-5 bv-example-row">
         <div class="subpage-title">
-          <h1>Not connected</h1>
+          <h2>Not connected</h2>
         </div>
         <div class="text-center">
           Please make sure that your wallet is connected to view the bet.
