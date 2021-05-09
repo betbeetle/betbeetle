@@ -1,4 +1,4 @@
-# betbeetle.com 
+# betbeetle.com - landing page
 Welcome to Betbeetle Github 👋 
 
 ## What is betbeetle?
